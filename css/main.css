@@ -57,11 +57,30 @@ main{
 .main-nav{
   display: none;
 }
+@media (min-width: 640px){
+  .btn-nav{
+    display: none;
+  }
+  .main-nav{
+    display: block;
+  }
+  .main-nav > ul{
+    display: flex;
+  }
+  .main-nav > ul > li{ 
+    margin-left: 25px;
+  }
+}
+@media (min-width: 1280px){
+  .top-bar{
+    padding: 15px 120px;
+  }
+}
 /* hero start */
 
 .hero-img-container{
   height: 50vh;
-  background-image: url('../img/roof-l.jpg');
+  background-image: url('../img/Bez\ tytułuyyyy.png');
   background-size: cover;
   background-position: center;
 }
@@ -101,8 +120,8 @@ main{
     display: flex;
   }
   .hero-text-container{
-    padding: 40px 20px 0 20px;
-    height: calc( 100vh - 70px - 40px);
+    padding: 20px 20px 0 20px;
+    height: calc( 100vh - 70px - 20px);
     flex-basis: 50%;
   }
   .hero-img-container{
@@ -110,6 +129,25 @@ main{
     order: 1;
     flex-basis: 60%;
 
+  }
+}
+@media (min-width: 768px){
+
+  .hero-text-container{
+    height: 400px;
+  }
+  .hero-img-container{
+    height: 420px;
+  }
+}
+@media (min-width: 1280px){
+
+  .hero-text-container{
+    padding: 80px 20px 0 120px;
+    height: 340px;
+  }
+  .hero-header{
+    font-size: 4rem;
   }
 }
 /* hero end */
@@ -173,13 +211,33 @@ main{
 }
 .services-img{
   position: absolute;
-  width: auto;
-  height: auto;
+  top: 50%;
+  left: 50%;
+  display: block;
   transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
 }
 .services-box-text{
   width: 50%;
 }
+}
+@media (min-width: 1280px){
+  .services-header{
+    padding: 70px 120px;
+  }
+  .services-box-text{
+    padding: 70px 120px 70px 20px;
+  }
+  .services-box-header{
+    font-size: 3rem;
+  }
+  .services-box:nth-child(even) > .services-box-text{
+    padding:70px 20px 70px 120px; 
+  }
+  .secondary-header{
+    font-size: 3.8rem;
+  }
 }
 /* services end */
 /* about-us start */
@@ -204,6 +262,12 @@ main{
   right: 0;
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 1280px){
+  .about-us-header{
+    padding: 70px 120px;
+  }
 }
 /* about-us end */
 
